@@ -15,37 +15,41 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
+import { AuthContext } from './context/authContext'
 
 function App() {
 
-  const currentUser = true;
-  const {darkMode} = useContext(DarkModeContext);
+  const currentUsers = true;
+  const { darkMode } = useContext(DarkModeContext);
+  const { currentUser } = useContext(AuthContext);
+  console.log(currentUser)
+  console.log(darkMode)
 
   const Layout = () => {
-    return(
+    return (
       <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <div>
-        <NavBar />
-        <div style={{display: "flex"}}>
-          <LeftBar />
-          <div style={{flex: 6}}>
-            <Outlet />
+          <NavBar />
+          <div style={{ display: "flex" }}>
+            <LeftBar />
+            <div style={{ flex: 6 }}>
+              <Outlet />
+            </div>
+            <RightBar />
           </div>
-          <RightBar />
         </div>
-      </div>
       </div>
     );
   }
 
-  const ProtectedRoute = ({children}) => {
-    if(!currentUser){
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUsers) {
       return <Navigate to={"login"} />;
     }
-    else{
+    else {
       return children
     }
-  } 
+  }
 
   const router = createBrowserRouter([
     {
@@ -58,7 +62,7 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Home/>,
+          element: <Home />,
         },
         {
           path: "/profile/:id",
