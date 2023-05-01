@@ -6,8 +6,8 @@ function Comment() {
     const comments = [
         {
             id: 1,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quas provident accusamus officia quae aspernatur ipsam, consectetur aut dolores iure dolor laboriosam ad, corporis quod voluptas dolorum sint doloremque molestiae!",
-            name: "Alice Smith",
+            desc: "Hbib lah m7arach b berad the wel msamen ",
+            name: "Marouane Louati",
             userId: 2,
             profilePicture:
                 "https://images.unsplash.com/photo-1682207151041-3b5dca526dd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
