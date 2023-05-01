@@ -1,81 +1,87 @@
-@import '../../style.scss';
+@import "../../style.scss";
 .rightbar {
-    @include themify($themes) {
-        flex: 3;
-        position: sticky;
-        top: 70px;
-        height: calc(100vh - 70px);
-        overflow: scroll;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-        background-color: themed("bgSoft");
-        .container {
-            padding: 20px;
-            .item {
-                background-color: themed("bg");
-                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                padding: 20px;
-                margin-bottom: 20px;
-                span {
-                    color: themed("textColor");
-                }
-                .user {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    margin: 20px 0;
-                    .userinfo {
-                        display: flex;
-                        align-items: center;
-                        gap: 20px;
-                        position: relative;
-                        img {
-                            width: 30px;
-                            height: 30px;
-                            object-fit: cover;
-                            border-radius: 50%;
-                        }
-                        p {
-                            color: themed("textColorSoft");
-                        }
-                        span {
-                            font-weight: 500;
-                            font-size: 14px;
-                            color: themed("textColor");
-                        }
-                        .online {
-                            width: 12px;
-                            height: 12px;
-                            border-radius: 50%;
-                            background-color: lightgreen;
-                            position: absolute;
-                            top: 0;
-                            left: 20px;
-                        }
-                    }
-                    span {
-                        font-size: 14px;
-                    }
-                    .buttons {
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                        button {
-                            padding: 5px;
-                            border: none;
-                            color: white;
-                            cursor: pointer;
-                            &:first-child {
-                                background-color: orange;
-                            }
-                            &:last-child {
-                                background-color: orangered;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+  @include themify($themes) {
+    @include mobile {
+      display: none;
     }
+    @include tablet {
+      display: none;
+    }
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    background-color: themed("bgSoft");
+    .container {
+      padding: 20px;
+      .item {
+        background-color: themed("bg");
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        span {
+          color: themed("textColor");
+        }
+        .user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 20px 0;
+          .userinfo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            img {
+              width: 30px;
+              height: 30px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+            p {
+              color: themed("textColorSoft");
+            }
+            span {
+              font-weight: 500;
+              font-size: 14px;
+              color: themed("textColor");
+            }
+            .online {
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background-color: lightgreen;
+              position: absolute;
+              top: 0;
+              left: 20px;
+            }
+          }
+          span {
+            font-size: 14px;
+          }
+          .buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            button {
+              padding: 5px;
+              border: none;
+              color: white;
+              cursor: pointer;
+              &:first-child {
+                background-color: orange;
+              }
+              &:last-child {
+                background-color: orangered;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
