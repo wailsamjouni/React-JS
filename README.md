@@ -1,15 +1,19 @@
 # [Project Name]
 
-[Project Description]
+This is a landing page inspired from a design from dribbble
 
-## Design Inspiration
+## Landing page photo
+![musicweb](https://user-images.githubusercontent.com/51680878/236016121-7d27ae25-26e7-4f23-8662-89a25c8af46a.png)
+spiration
+
+## Design 
 
 The design of this landing page was inspired by Tunecast - Podcast app on Dribbble
 
 ## Photo Attribution
 
-The photo used in the landing page was downloaded from Unsplash: (https://unsplash.com/de)
-![musicweb](https://user-images.githubusercontent.com/51680878/236015597-9f682a6a-b5f4-4fa3-a7ce-24abb9b4a83b.png)
+The photos used in the landing page was downloaded from Unsplash: (https://unsplash.com/de). The links og the photos are in the project (as source in the images tags).
+
 
 ## Installation
 
