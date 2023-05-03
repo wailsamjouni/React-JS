@@ -1,0 +1,60 @@
+.bottombar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  height: 93%;
+}
+
+.bottombar .first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottombar .first span {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bottombar .second {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.bottombar .second #new {
+  font-weight: 500;
+  color: orange;
+  opacity: 1;
+}
+
+.bottombar .music {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottombar .third {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.bottombar .third .thirdleft {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottombar .third .thirdleft span {
+  font-size: 20px;
+  font-weight: 500;
+}

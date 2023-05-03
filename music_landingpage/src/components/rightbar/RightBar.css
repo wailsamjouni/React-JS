@@ -1,0 +1,7 @@
+.rightbar {
+  display: flex;
+  flex-direction: column;
+  flex: 10;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
