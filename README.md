@@ -1,4 +1,4 @@
-# [Project Name]
+# Music page
 
 This is a landing page inspired from a design from dribbble
 
