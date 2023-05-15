@@ -52,12 +52,12 @@ function NavBar() {
                                 open &&
                                 <div className="options">
                                     {currentUser?.isSeller &&
-                                        (
-                                            <>
-                                                <Link className='link' to='/mygigs'>Gigs</Link>
-                                                <Link className='link' to='/add'>Add New Gig</Link>
-                                            </>
-                                        )
+
+                                        <>
+                                            <Link className='link' to='/mygigs'>Gigs</Link>
+                                            <Link className='link' to='/add'>Add New Gig</Link>
+                                        </>
+
                                     }
                                     <Link className='link' to='/orders'>Orders</Link>
                                     <Link className='link' to='/messages'>Messages</Link>
