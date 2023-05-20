@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./SingleTodo.css";
 import { AiFillEdit } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
@@ -14,6 +14,11 @@ interface Props {
 function SingleTodo({ todo, todos, setTodos }: Props) {
   const [edit, setEdit] = useState<boolean>(false);
   const [editTodo, setEditTodo] = useState<string>(todo.todo);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, [edit]);
 
   const handleDone = (id: number): void => {
     setTodos(
@@ -43,6 +48,7 @@ function SingleTodo({ todo, todos, setTodos }: Props) {
     >
       {edit ? (
         <input
+          ref={inputRef}
           className="singletodo__input"
           value={editTodo}
           onChange={(event) => setEditTodo(event.target.value)}
