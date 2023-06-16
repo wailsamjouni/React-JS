@@ -1,0 +1,236 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/extend";
+
+.container {
+  position: relative;
+  .overlay {
+    position: absolute;
+    background-color: #f4f4ed00;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-image: linear-gradient(
+      to left,
+      $main-bg-color,
+      $footer-bg-color,
+      #f7c9c4
+    );
+    min-height: 35vh;
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      margin: 0 auto;
+      div:first-child {
+        @include flexCenter();
+        background-color: $main-bg-color;
+        padding: 5px;
+        cursor: pointer;
+        h3 {
+          font-size: 1.5em;
+          color: white;
+          span {
+            color: black;
+          }
+          @media screen and (min-width: 850px) {
+            font-size: 2.5em;
+            color: white;
+          }
+        }
+        @media screen and (min-width: 850px) {
+          padding: 10px 20px;
+        }
+      }
+      ul {
+        display: none;
+        li {
+          a {
+            @media screen and (min-width: 850px) {
+              margin-left: 20px;
+              font-size: 1.1em;
+              font-weight: 400;
+              color: black;
+            }
+          }
+        }
+        .login__container {
+          position: absolute;
+          background-color: white;
+          font-size: 1.1em;
+          font-weight: 400;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          top: 50px;
+          right: 0;
+          padding: 20px;
+          display: none;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            right: 30px;
+            top: -5px;
+            transform: rotate(45deg);
+          }
+          span:hover {
+            color: #43d6df;
+            cursor: pointer;
+          }
+          hr {
+            color: rgba(128, 128, 128, 0.042);
+          }
+        }
+        @media screen and (min-width: 850px) {
+          position: relative;
+          display: flex;
+          gap: 20px;
+        }
+      }
+      .menu {
+        position: relative;
+        .menulist {
+          display: flex;
+          flex-direction: column;
+          background-color: white;
+          padding: 10px;
+          position: absolute;
+          right: 0;
+          margin-top: 10px;
+          display: none;
+        }
+        .hamburger {
+          cursor: pointer;
+          @media screen and (min-width: 850px) {
+            display: none;
+          }
+        }
+
+        .close {
+          cursor: pointer;
+          display: none;
+        }
+        @media screen and (min-width: 850px) {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 850px) {
+        .header__top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px;
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      &top {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .header__inputwrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          width: 85%;
+          .header__inputleft {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            background-color: white;
+            height: 50px;
+            input {
+              border: none;
+              outline: none;
+              background-color: transparent;
+              padding: 10px;
+              &::placeholder {
+                font-size: 1.4em;
+                color: gray;
+              }
+            }
+            @media screen and (min-width: 850px) {
+              display: flex;
+              width: 50%;
+              align-items: center;
+              background-color: white;
+              height: 50px;
+            }
+          }
+          @media screen and (min-width: 850px) {
+            gap: 20px;
+            flex: 1;
+            flex-direction: row;
+          }
+        }
+        .header__findjob {
+          @extend %button-style;
+          padding: 5px 20px;
+          width: 85%;
+          height: 50px;
+          @media screen and (min-width: 850px) {
+            width: fit-content;
+          }
+        }
+        @media screen and (min-width: 850px) {
+          padding: 10px;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 20px;
+        }
+      }
+      &bottom {
+        @include flexCenter;
+        gap: 30px;
+        width: 70%;
+        margin: 20px auto;
+        height: 50px;
+        .header__btncategory {
+          @extend %button-style;
+          padding: 5px;
+          border-radius: 10px;
+        }
+      }
+      @media screen and (min-width: 850px) {
+        width: 75%;
+        margin: 0 auto;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 850px) {
+}

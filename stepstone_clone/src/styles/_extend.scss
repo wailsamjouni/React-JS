@@ -1,0 +1,9 @@
+@import "./variables";
+%button-style {
+  background-color: $main-bg-color;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+}
