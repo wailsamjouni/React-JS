@@ -159,6 +159,8 @@
             align-items: center;
             background-color: white;
             height: 50px;
+            padding: 10px;
+
             input {
               border: none;
               outline: none;
@@ -185,6 +187,7 @@
         }
         .header__findjob {
           @extend %button-style;
+          font-size: 1.1em;
           padding: 5px 20px;
           width: 85%;
           height: 50px;
@@ -229,7 +232,10 @@
 }
 
 .icon {
-  font-size: 30px;
+  font-size: 25px;
+  @media screen and (min-width: 850px) {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 850px) {
